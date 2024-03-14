@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Picture from './assets/Me.jpg'
 import { Carousel } from 'react-responsive-carousel';
+
 import ReactLogo from './assets/React.png'
 import SpringLogo from './assets/Spring.png'
 import JavaLogo from './assets/Java.png'
@@ -15,17 +16,9 @@ import MySQLLogo from './assets/MySQL.png'
 import ASPNETLogo from './assets/ASP.NET.png'
 import Ticketpass from './assets/Screenshot_61.png'
 
+
 const App = () => {
   
-  const [projects, setProjects] = useState([
-    {
-      id: 1,
-      name: "Ticketpass",
-      img: Ticketpass,
-      technologies: ["React", "Spring", "Java", "JavaScript", "MySQL"]
-    }
-  ]);
-
   useEffect(() => {
         
     function sleep(ms) {
@@ -231,6 +224,7 @@ const App = () => {
         </div>
 
         <Carousel className="w-60% ml-10%">
+      
             <div>
               <div key="1" className='bg-red-700 mb-5% pb-5% w-80% h-50% justify-center rounded-3xl'>
                       <img className=" w-100% h-100% rounded-3xl" src={Ticketpass} alt="Ticketpass" />
@@ -273,47 +267,6 @@ const App = () => {
                 </div>
               </div>
 
-              <div>
-                <div key="2" className='bg-red-700 mb-5% pb-5% w-80% h-50% justify-center rounded-3xl'>
-                        <img className=" w-100% h-100% rounded-3xl" src={Ticketpass} alt="Ticketpass" />
-                    
-                        <h1 className='font-inter font-bold mt-2% text-center text-projectHeading'>Ticketpass</h1>
-
-                      <div className='grid grid-cols-5 gap-x-5% gap-y-10% pl-10% pr-10% pt-3% pb-3%'>       
-                        
-                          <div className=' bg-red-200 w-100% h-150% rounded-3xl'>
-                            <div className='justify-center items-center'>
-                              <h1 className='font-inter font-bold text-technology pt-30% text-center'>React</h1>
-                            </div>
-                          </div>
-
-                          <div className=' bg-red-200 w-100% h-150% rounded-3xl'>
-                            <div className='justify-center items-center'>
-                              <h1 className='font-inter font-bold text-technology pt-30% text-center'>Spring</h1>
-                            </div>
-                          </div>
-
-                          <div className=' bg-red-200 w-100% h-150% rounded-3xl'>
-                            <div className='justify-center items-center'>
-                              <h1 className='font-inter font-bold text-technology pt-30% text-center'>Java</h1>
-                            </div>
-                          </div>
-
-                          <div className=' bg-red-200 w-100% h-150% rounded-3xl'>
-                            <div className='justify-center items-center'>
-                              <h1 className='font-inter font-bold text-technology pt-30% text-center'>JS</h1>
-                            </div>
-                          </div>
-
-                          <div className=' bg-red-200 w-100% h-150% rounded-3xl'>
-                            <div className='justify-center items-center'>
-                              <h1 className='font-inter font-bold text-technology pt-30% text-center'>MySQL</h1>
-                            </div>
-                          </div>
-
-                      </div>
-                  </div>
-              </div>
         </Carousel>
 
         </div>
