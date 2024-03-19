@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import Picture from './assets/Me.jpg'
 import { Carousel } from 'react-responsive-carousel';
-
+import GithubLogo from './assets/github.png'
+import MailLogo from './assets/mail.png'
+import LinkedInLogo from './assets/linkedin.png'
 import ReactLogo from './assets/React.png'
 import SpringLogo from './assets/Spring.png'
 import JavaLogo from './assets/Java.png'
@@ -90,7 +92,7 @@ const App = () => {
           </div>
       </div>
 
-      <div className='flex font-inter flex-col mt-10% mb-20% justify-center items-center'>
+      <div className='flex font-inter flex-col mt-10% mb-5% justify-center items-center'>
         <div className='text-center'>
           <h1 className="text-heading(sm) text-red-700 font-bold md:text-heading(md) xl:text-heading(xl)">
             Experience
@@ -216,20 +218,22 @@ const App = () => {
 
         </div>
 
-        <div className='flex font-inter flex-col mt-5% mb-10% justify-center items-center'>
+      </div>
+
+        <div className='flex font-inter flex-col justify-center items-center'>
         <div className='text-center'>
           <h1 className="text-heading(sm) text-red-700 font-bold md:text-heading(md) xl:text-heading(xl)">
             My work
           </h1>
         </div>
 
-        <Carousel className="w-60% ml-10%">
+        <Carousel className="w-60% ml-11.5%">
       
             <div>
               <div key="1" className='bg-red-700 mb-5% pb-5% w-80% h-50% justify-center rounded-3xl'>
                       <img className=" w-100% h-100% rounded-3xl" src={Ticketpass} alt="Ticketpass" />
                   
-                      <h1 className='font-inter font-bold mt-2% text-center text-projectHeading'>Ticketpass</h1>
+                      <h1 className='font-inter font-bold text-white mt-2% text-center text-projectHeading'>Ticketpass</h1>
 
                     <div className='grid grid-cols-5 gap-x-5% gap-y-10% pl-10% pr-10% pt-3% pb-3%'>       
                       
@@ -271,7 +275,24 @@ const App = () => {
 
         </div>
 
-      </div>
+        <div className='mt-10% bg-red-700 p-2% w-100%'>
+            <div className='flex justify-center'>
+
+                <a href="https://github.com/TanzerDx" className='rounded-3xl h-40% w-3% ml-1% mr-1%'>
+                  <img src={GithubLogo} alt="GithubLogo" />
+                </a>
+
+                <a href="https://www.linkedin.com/in/hristo-ganchev-15b3b724b/"  className='rounded-3xl h-40% w-3% ml-1% mr-1%'>
+                  <img src={LinkedInLogo} alt="LinkedInLogo" />
+                </a>
+
+                <a href="mailto:hristo_ganchev3@gmail.com" className='rounded-3xl h-40% w-3% ml-1% mr-1%'>
+                  <img src={MailLogo} alt="MailLogo" />
+                </a>
+
+            </div>
+        </div>
+
     </>
   );
 }
