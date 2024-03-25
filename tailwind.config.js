@@ -66,6 +66,10 @@ export default {
         'technology': '170%',
 
         'projectHeading': '260%',
+
+        'projectDescHeading(xl)': '420%',
+
+        'projectDesc(xl)': '140%',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
