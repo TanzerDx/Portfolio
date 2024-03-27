@@ -31,6 +31,8 @@ export default {
         '70%': '70%',
         '75%': '75%',
         '80%': '80%',
+        '90%': '90%',
+        '95%': '95%',
         '100%': '100%',
         '120%': '120%',
         '150%': '150%',
@@ -66,6 +68,11 @@ export default {
         'technology': '170%',
 
         'projectHeading': '260%',
+
+        'projectHeadingInPopup(xl)': '560%',
+        'projectHeadingInPopup(md)': '200%',
+        'projectHeadingInPopup(sm)': '150%',
+        'projectHeadingInPopup(default)': '100%',
 
         'projectDescHeading(xl)': '420%',
 

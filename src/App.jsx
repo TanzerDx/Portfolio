@@ -17,6 +17,8 @@ import PythonLogo from './assets/Python.png'
 import MySQLLogo from './assets/MySQL.png'
 import ASPNETLogo from './assets/ASP.NET.png'
 import Ticketpass from './assets/Screenshot_61.png'
+import CodeExampleTicketpass from './assets/CodeExampleTicketpass.png'
+import VideoExampleTicketpass from './assets/TicketpassVideo.mp4'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './Popup.css'
@@ -237,6 +239,13 @@ const App = () => {
                     
                     <Popup trigger={<img className=" w-100% h-100% rounded-3xl" src={Ticketpass} alt="Ticketpass" />} position="center">  
                       <div>
+
+                      <div className='text-center mb-5%'>
+                        <h1 className="text-projectHeadingInPopup(sm) text-red-700 font-bold md:text-projectHeadingInPopup(md) xl:text-projectHeadingInPopup(xl)">
+                          Ticketpass
+                        </h1>
+                    </div>
+
                         <div className="xl:text-projectDescHeading(xl)">Introduction</div>
                             
                             <div className='xl:text-projectDesc(xl) mt-1% mb-1%'>
@@ -256,10 +265,12 @@ const App = () => {
                               The project was developed using React + Vite framework, together with JavaScript, HTML and pure CSS. Animations were involved in the All Concerts, Log In/Register, and My Tickets page. Websockets are also implemented, so that in case of an update of a concert, ticket holders for this specific event will be notified about the update. A full walkthrough of the project is available in the video below, where the process of purchasing four concert tickets is demonstrated.
                             </div>
 
-                            insert vid here
+                            <video className="mt-5% mb-5% border-2 border-black"controls >
+                              <source src={VideoExampleTicketpass} type="video/mp4"/>
+                            </video>
 
                             <div className='xl:text-projectDesc(xl) mt-1% mb-1%'>
-                            You can find the full front end source code here.
+                            You can find the full front end source code <a href="https://github.com/TanzerDx/Ticketpass-Frontend" className='text-red-700 underline'>here</a>.
                             </div>
 
 
@@ -278,10 +289,12 @@ const App = () => {
                               Based on the OWASP 10 Security Risks of 2021,  security has been devised in the application in order to keep the product as safe as possible. The use of parameterized queries, access tokens, encoding and decoding of passwords, and different role and ID checks are integrated throughout all three layers of the application. Sensitive information, such as the JWT Secret Key, is stored in an .env file, which is not present in the repository. 
                             </div>
 
-                            screenshot of code example here
+                            <div className='mb-5% mt-5% w-95%'>
+                              <img className="ml-3%" src={CodeExampleTicketpass } alt="Code Example Ticketpass" />
+                            </div>
 
                             <div className='xl:text-projectDesc(xl) mt-1% mb-1%'>
-                              You can find the full back end source code here.
+                              You can find the full back end source code <a href="https://github.com/TanzerDx/Ticketpass-Backend" className='text-red-700 underline'>here</a>.
                             </div>
 
 
@@ -348,7 +361,7 @@ const App = () => {
                   <img src={LinkedInLogo} alt="LinkedInLogo" />
                 </a>
 
-                <a href="mailto:hristo_ganchev3@gmail.com" className='rounded-3xl h-40% w-3% ml-1% mr-1%'>
+                <a href="mailto:hristoganchev3@gmail.com" className='rounded-3xl h-40% w-3% ml-1% mr-1%'>
                   <img src={MailLogo} alt="MailLogo" />
                 </a>
 
