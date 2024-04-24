@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Picture from './assets/Me.jpg'
+import Picture from './assets/Me.png'
 import { Carousel } from 'react-responsive-carousel';
 import GithubLogo from './assets/github.png'
 import MailLogo from './assets/mail.png'
@@ -44,7 +44,7 @@ const App = () => {
         
         if (element.innerText === "Hi,") 
         {
-          await sleep(400);
+          await sleep(160);
         }
 
         await sleep(sleepTime);
@@ -54,23 +54,26 @@ const App = () => {
     writePhrase();
   }, []);
 
+
   return (
     <>
-      <div className='flex font-inter flex-col mt-15.5% mb-30% justify-center items-center'>
+    <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory'>
+
+      <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% justify-center items-center'>
         <div className='text-center'>
           <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-red-700 font-bold">
-            <span id="typewriter-signin"></span><span id="cursor-signin">|</span>
+            <span id="typewriter-signin"></span>
           </h1>
         </div>
 
         <div className='text-center'>
             <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold">
-              Full Stack Junior Software Developer 
+              Full Stack Software Developer 
             </h3>
         </div>
       </div>
 
-      <div className='bg-red-700 mb-5% pb-5% w-100%'>
+      <div className='snap-always snap-center bg-red-700 mb-5% pb-5% w-100%'>
        
         <div className='flex w-100% mt-2% text-white'>
             
@@ -97,7 +100,8 @@ const App = () => {
           </div>
       </div>
 
-      <div className='flex font-inter flex-col mt-10% mb-5% justify-center items-center'>
+  <div className='mt-10% mb-5%'>
+      <div className='flex font-inter flex-col justify-center items-center'>
         <div className='text-center'>
           <h1 className="text-heading(sm) text-red-700 font-bold md:text-heading(md) xl:text-heading(xl)">
             Experience
@@ -110,6 +114,8 @@ const App = () => {
               the main technologies I have worked with:
             </h3>
         </div>
+
+        <div className='snap-always snap-center mt-3%'></div>
 
         <div className='grid grid-cols-2 gap-x-5% gap-y-10% pl-10% pr-10% pt-3% pb-10% md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
           
@@ -224,7 +230,7 @@ const App = () => {
         </div>
 
       </div>
-
+  </div>
         <div className='flex font-inter flex-col justify-center items-center'>
         <div className='text-center'>
           <h1 className="text-heading(sm) text-red-700 font-bold md:text-heading(md) xl:text-heading(xl)">
@@ -234,7 +240,7 @@ const App = () => {
 
         <Carousel className="w-60% ml-11.5%">
       
-            <div>
+            <div className="snap-always snap-end">
               <div key="1" className='bg-red-700 mb-5% pb-5% w-80% h-50% justify-center rounded-3xl'>
                     
                     <Popup trigger={<img className=" w-100% h-100% rounded-3xl" src={Ticketpass} alt="Ticketpass" />} position="center">  
@@ -350,7 +356,7 @@ const App = () => {
 
         </div>
 
-        <div className='mt-10% bg-red-700 p-2% w-100%'>
+        <div className='snap-always snap-end mt-10% bg-red-700 p-2% w-100%'>
             <div className='flex justify-center'>
 
                 <a href="https://github.com/TanzerDx" className='rounded-3xl h-40% w-3% ml-1% mr-1%'>
@@ -368,6 +374,7 @@ const App = () => {
             </div>
         </div>
 
+  </div>
     </>
   );
 }

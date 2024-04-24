@@ -60,7 +60,7 @@ export default {
         'aboutMeText(sm)': '120%',
         'aboutMeText(default)': '90%',
 
-        'experience(xl)': '360%',
+        'experience(xl)': '340%',
         'experience(md)': '270%',
         'experience(sm)': '150%',
         'experience(default)': '140%',
