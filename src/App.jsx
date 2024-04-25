@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef} from 'react';
+
 import Picture from './assets/Me.png'
 import { Carousel } from 'react-responsive-carousel';
 import GithubLogo from './assets/github.png'
@@ -19,14 +20,30 @@ import ASPNETLogo from './assets/ASP.NET.png'
 import Ticketpass from './assets/Screenshot_61.png'
 import CodeExampleTicketpass from './assets/CodeExampleTicketpass.png'
 import VideoExampleTicketpass from './assets/TicketpassVideo.mp4'
+
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './Popup.css'
 
+import VANTA from 'vanta';
+import * as THREE from 'three';
+import WAVES from 'vanta/dist/vanta.waves.min'
+
 
 const App = () => {
   
-  useEffect(() => {
+
+    useEffect(() => {
+        WAVES({
+          el: "#introduction",
+          THREE: THREE,
+          color: 0x888889
+        })
+      }
+    , []);
+
+
+    useEffect(() => {
         
     function sleep(ms) {
       return new Promise((resolve) => 
@@ -57,22 +74,23 @@ const App = () => {
 
   return (
     <>
-    <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory'>
+    <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory scroll-smooth'>
 
-      <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% justify-center items-center'>
-        <div className='text-center'>
-          <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-red-700 font-bold">
-            <span id="typewriter-signin"></span>
-          </h1>
-        </div>
+      <div id="introduction" className='h-100%'>
+        <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% justify-center items-center'>
+          <div className='text-center'>
+            <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-red-700 font-bold">
+              <span id="typewriter-signin"></span>
+            </h1>
+          </div>
 
-        <div className='text-center'>
-            <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold">
-              Full Stack Software Developer 
-            </h3>
+          <div className='text-center'>
+              <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold">
+                Full Stack Software Developer 
+              </h3>
+          </div>
         </div>
       </div>
-
       <div className='snap-always snap-center bg-red-700 mb-5% pb-5% w-100%'>
        
         <div className='flex w-100% mt-2% text-white'>
@@ -88,7 +106,7 @@ const App = () => {
 
               <h1 className='text-aboutMeText(default) sm:text-aboutMeText(sm) md:text-aboutMeText(md) xl:text-aboutMeText(xl) font-inter font-bold ml-2% mt-2%'>
                 I am serious in my career development and I am always eager to learn something new. 
-                I can work both independently and in a team setting. If you are looking for a young professional, this is the right place.
+                I can work both independently and in a team setting. If you are looking for a young professional, you are in the right place.
               </h1>
             </div>
 
@@ -108,8 +126,8 @@ const App = () => {
           </h1>
         </div>
 
-        <div className='text-center'>
-            <h3 className="text-experience(sm) md:text-experience(md) xl:text-experience(xl) font-bold w-100% ">
+        <div className='text-center w-80%'>
+            <h3 className="text-experience(sm) md:text-experience(md) xl:text-experience(xl) font-bold">
             For my two-year software experience, these are 
               the main technologies I have worked with:
             </h3>

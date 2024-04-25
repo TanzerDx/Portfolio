@@ -15,7 +15,9 @@
     "react-popupbox": "^2.0.9",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.30.2",
-    "reactjs-popup": "^2.0.6"
+    "reactjs-popup": "^2.0.6",
+    "three": "^0.163.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
