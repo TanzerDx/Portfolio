@@ -12,7 +12,6 @@ import MySQLLogo from '../assets/MySQL.png'
 import ASPNETLogo from '../assets/ASP.NET.png'
 
 const Experience = () => {
-
 return (
     <>
     <div className='flex font-inter flex-col justify-center items-center'>
