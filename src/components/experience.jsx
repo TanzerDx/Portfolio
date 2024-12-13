@@ -41,6 +41,7 @@ return (
       </div>
     </div>
 
+
     <div className='text-black flex flex-col justify-center items-center hover:-translate-y-6 duration-300'>   
       <div className='p-5% bg-red-700 w-60% h-100% rounded-3xl'>
         <img className="p-6%" src={SpringLogo} alt="SpringLogo" />
