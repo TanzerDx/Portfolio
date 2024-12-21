@@ -11,72 +11,63 @@ import LinkedInLogo from './assets/linkedin.png'
 import 'reactjs-popup/dist/index.css';
 import './Popup.css'
 
-import VANTA from 'vanta';
+import WAVES from 'vanta/dist/vanta.waves.min';
 import * as THREE from 'three';
-import WAVES from 'vanta/dist/vanta.waves.min'
-
 
 const App = () => {
-  
+  const vantaRef = useRef(null);
+  const vantaEffect = useRef(null);
 
-    useEffect(() => {
-        WAVES({
-          el: "#introduction",
-          THREE: THREE,
-          color: 0x888889
-        })
-      }
-    , []);
-
-
-    useEffect(() => {
-        
-    function sleep(ms) {
-      return new Promise((resolve) => 
-        setTimeout(resolve, ms)
-      );
+  useEffect(() => {
+    if (typeof window !== "undefined" && !vantaEffect.current) {
+      vantaEffect.current = WAVES({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x211046,
+        shininess: 26.00,
+        waveHeight: 20.50,
+        waveSpeed: 0.50,
+        zoom: 0.76,
+        THREE,
+      });
     }
-
-    const phrase = "Hi, I'm Hristo";
-    const element = document.getElementById('typewriter-signin');
-    let sleepTime = 50;
-
-    const writePhrase = async () => {
-      for (let i = 0; i < phrase.length; i++) {
-        element.innerText = phrase.substring(0, i + 1);
-        
-        if (element.innerText === "Hi,") 
-        {
-          await sleep(160);
-        }
-
-        await sleep(sleepTime);
+    
+    return () => {
+      if (vantaEffect.current) {
+        vantaEffect.current.destroy();
       }
     };
-  
-    writePhrase();
   }, []);
+
 
 
   return (
     <>
     <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory scroll-smooth'>
 
-      <div id="introduction" className='h-100%'>
-        <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% justify-center items-center'>
-          <div className='text-center'>
-            <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-red-700 font-bold">
-              <span id="typewriter-signin"></span>
-            </h1>
-          </div>
 
-          <div className='text-center'>
-              <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold">
-                Full Stack Software Developer 
-              </h3>
-          </div>
-        </div>
-      </div>
+            <div ref={vantaRef} id="introduction">
+              <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% justify-center items-center'>
+                <div className='text-center'>
+                  <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-blue-700 font-bold">
+                    Hi, I'm Hristo
+                  </h1>
+                </div>
+
+                <div className='text-center'>
+                    <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold text-blue-400">
+                      Full Stack Software Developer 
+                    </h3>
+                </div>
+              </div>
+            </div>
+     
       
       <div className='snap-always snap-center bg-red-700 mb-5% pb-5% w-100%'> 
        <AboutMe/>

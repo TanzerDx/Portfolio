@@ -1,6 +1,6 @@
-import CodeExampleTicketpass from '../../assets/CodeExampleTicketpass.png'
-import VideoExampleTicketpass from '../../assets/TicketpassVideo.mp4'
-import TicketpassPic from '../../assets/Screenshot_61.png'
+import CodeExampleTicketpass from '../../assets/ticketpass/CodeExampleTicketpass.png'
+import VideoExampleTicketpass from '../../assets/ticketpass/TicketpassVideo.mp4'
+import TicketpassPic from '../../assets/ticketpass/Screenshot_61.png'
 import Popup from 'reactjs-popup';
 
 const Ticketpass = () => {
