@@ -7,7 +7,7 @@ import DockerLogo from '../assets/Docker.png'
 import TailwindLogo from '../assets/Tailwind.png'
 import CSLogo from '../assets/CS.png'
 import CSSLogo from '../assets/CSS.png'
-import PythonLogo from '../assets/Python.png'
+import TypeScriptLogo from '../assets/TypeScript.png'
 import MySQLLogo from '../assets/MySQL.png'
 import ASPNETLogo from '../assets/ASP.NET.png'
 
@@ -116,10 +116,10 @@ return (
 
     <div className='text-black flex flex-col justify-center items-center hover:-translate-y-6 duration-300'>   
       <div className='p-5% bg-red-700 w-60% h-100% rounded-3xl'>
-        <img className="p-6%" src={PythonLogo} alt="PythonLogo" />
+        <img className="p-6%" src={TypeScriptLogo} alt="TypeScriptLogo" />
       </div>
       <div className='justify-center items-center'>
-        <h1 className='font-inter font-bold text-technology mt-10% text-center'>Python</h1>
+        <h1 className='font-inter font-bold text-technology mt-10% text-center'>TypeScript</h1>
       </div>
     </div>
 
