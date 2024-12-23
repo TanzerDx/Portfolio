@@ -49,27 +49,28 @@ const App = () => {
 
   return (
     <>
+    <body className='bg-backgroundColor'>
     <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory scroll-smooth'>
 
 
             <div ref={vantaRef} id="introduction">
-              <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% justify-center items-center'>
-                <div className='text-center'>
-                  <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-blue-700 font-bold">
+              <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% mr-4% justify-right items-right'>
+                <div className='text-right'>
+                  <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-textColor font-bold">
                     Hi, I'm Hristo
                   </h1>
                 </div>
 
-                <div className='text-center'>
-                    <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold text-blue-400">
-                      Full Stack Software Developer 
+                <div className='text-right'>
+                    <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold text-white">
+                      Software Developer 
                     </h3>
                 </div>
               </div>
             </div>
      
       
-      <div className='snap-always snap-center bg-red-700 mb-5% pb-5% w-100%'> 
+      <div className='snap-always snap-center mb-5% pb-5% w-100%'> 
        <AboutMe/>
       </div>
 
@@ -83,7 +84,7 @@ const App = () => {
 
         </div>
 
-        <div className='snap-always snap-end mt-10% bg-red-700 p-2% w-100%'>
+        <div className='snap-always snap-end mt-10% bg-secondaryColor p-2% w-100%'>
             <div className='flex justify-center'>
 
                 <a href="https://github.com/TanzerDx" className='rounded-3xl h-40% w-3% ml-1% mr-1%'>
@@ -102,6 +103,7 @@ const App = () => {
         </div>
 
   </div>
+  </body>
     </>
   );
 }

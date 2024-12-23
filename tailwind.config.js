@@ -40,7 +40,7 @@ export default {
       },
       fontSize: {
 
-        'heading(xl)': '950%',
+        'heading(xl)': '800%',
         'heading(md)': '650%',
         'heading(sm)': '500%',
         'heading(default)': '350%',
@@ -80,6 +80,11 @@ export default {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        backgroundColor: '#17182D',
+        textColor: '#9BE0E0',
+        secondaryColor: "#6BBEB0"
       }
       
   }

@@ -7,8 +7,8 @@ return (
            
             <div className='flex w-100% mt-2% text-white'>
                 
-                <div className='text-white w-60%'>
-                  <h1 className='text-aboutMe(default) sm:text-aboutMe(sm) md:text-aboutMe(md) xl:text-aboutMe(xl) font-inter font-bold ml-10%'>
+                <div className='w-60%'>
+                  <h1 className='text-textColor text-aboutMe(default) sm:text-aboutMe(sm) md:text-aboutMe(md) xl:text-aboutMe(xl) font-inter font-bold ml-10%'>
                       About me
                   </h1>
                           

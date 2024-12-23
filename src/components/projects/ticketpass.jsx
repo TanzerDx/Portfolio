@@ -6,13 +6,13 @@ import Popup from 'reactjs-popup';
 const Ticketpass = () => {
     return (
                 <div className="snap-always snap-end">
-                  <div key="1" className='bg-red-700 mb-5% pb-5% w-80% h-50% justify-center rounded-3xl'>
+                  <div key="1" className='bg-secondaryColor mb-5% pb-5% w-80% h-50% justify-center rounded-3xl'>
                         
                         <Popup trigger={<img className=" w-100% h-100% rounded-3xl" src={TicketpassPic} alt="Ticketpass" />} position="center">  
                                     <div>
                                 
                                     <div className='text-center mb-5%'>
-                                      <h1 className="text-projectHeadingInPopup(sm) text-red-700 font-bold md:text-projectHeadingInPopup(md) xl:text-projectHeadingInPopup(xl)">
+                                      <h1 className="text-projectHeadingInPopup(sm) text-secondaryColor font-bold md:text-projectHeadingInPopup(md) xl:text-projectHeadingInPopup(xl)">
                                         Ticketpass
                                       </h1>
                                   </div>
@@ -65,7 +65,7 @@ const Ticketpass = () => {
                                           </div>
                             
                                           <div className='xl:text-projectDesc(xl) mt-1% mb-1%'>
-                                            You can find the full back end source code <a href="https://github.com/TanzerDx/Ticketpass-Backend" className='text-red-700 underline'>here</a>.
+                                            You can find the full back end source code <a href="https://github.com/TanzerDx/Ticketpass-Backend" className='text-secondaryColor underline'>here</a>.
                                           </div>
                             
                             

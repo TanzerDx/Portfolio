@@ -6,7 +6,7 @@ const MyWork = () => {
 return (
      <>
      <div className='text-center'>
-              <h1 className="text-heading(sm) text-red-700 font-bold md:text-heading(md) xl:text-heading(xl)">
+              <h1 className="text-heading(sm) text-textColor font-bold md:text-heading(md) xl:text-heading(xl)">
                 My work
               </h1>
             </div>
