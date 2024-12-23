@@ -11,63 +11,57 @@ import LinkedInLogo from './assets/linkedin.png'
 import 'reactjs-popup/dist/index.css';
 import './Popup.css'
 
-import WAVES from 'vanta/dist/vanta.waves.min';
+import VANTA from 'vanta';
 import * as THREE from 'three';
+import TRUNK from 'vanta/dist/vanta.trunk.min'
 
 const App = () => {
-  const vantaRef = useRef(null);
-  const vantaEffect = useRef(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && !vantaEffect.current) {
-      vantaEffect.current = WAVES({
-        el: vantaRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x211046,
-        shininess: 26.00,
-        waveHeight: 20.50,
-        waveSpeed: 0.50,
-        zoom: 0.76,
-        THREE,
-      });
-    }
-    
-    return () => {
-      if (vantaEffect.current) {
-        vantaEffect.current.destroy();
-      }
-    };
+
+    TRUNK({
+      el: "#trunkEffect",
+      mouseControls: true,
+      THREE: THREE,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x9Be0e0,
+      backgroundColor: 0x17182d,
+      spacing: 4.50,
+      chaos: 6.50
+    })
+
   }, []);
 
-
-
   return (
-    <>
     <body className='bg-backgroundColor'>
     <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory scroll-smooth'>
 
 
-            <div ref={vantaRef} id="introduction">
-              <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% mr-4% justify-right items-right'>
-                <div className='text-right'>
-                  <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-textColor font-bold">
-                    Hi, I'm Hristo
-                  </h1>
-                </div>
+    <div id="introduction" className='flex justify-between w-full'>
+      
+      <div id="trunkEffect" style={{ width: '100%', height: '100vh' }}>
+      </div>
 
-                <div className='text-right'>
-                    <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold text-white">
-                      Software Developer 
-                    </h3>
-                </div>
-              </div>
-            </div>
+      <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% mr-4% justify-right items-right'>
+        <div className='text-right'>
+          <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-textColor font-bold">
+            Hi, I'm Hristo
+          </h1>
+        </div>
+
+        <div className='text-right'>
+          <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold text-white">
+            Software Developer 
+          </h3>
+        </div>
+      </div>
+
+    </div>
      
       
       <div className='snap-always snap-center mb-5% pb-5% w-100%'> 
@@ -104,7 +98,6 @@ const App = () => {
 
   </div>
   </body>
-    </>
   );
 }
 
