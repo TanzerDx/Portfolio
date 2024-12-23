@@ -11,9 +11,8 @@ import LinkedInLogo from './assets/linkedin.png'
 import 'reactjs-popup/dist/index.css';
 import './Popup.css'
 
-import VANTA from 'vanta';
 import * as THREE from 'three';
-import TRUNK from 'vanta/dist/vanta.trunk.min'
+import TRUNK from 'vanta/src/vanta.trunk'
 
 const App = () => {
 
@@ -25,26 +24,27 @@ const App = () => {
       THREE: THREE,
       touchControls: true,
       gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
+      scale: 15.00,
       scaleMobile: 1.00,
       color: 0x9Be0e0,
       backgroundColor: 0x17182d,
       spacing: 4.50,
-      chaos: 6.50
+      chaos: 3.50
     })
 
   }, []);
 
   return (
-    <body className='bg-backgroundColor'>
+    <div className='bg-backgroundColor'>
     <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory scroll-smooth'>
 
 
     <div id="introduction" className='flex justify-between w-full'>
       
-      <div id="trunkEffect" style={{ width: '100%', height: '100vh' }}>
+      <div id="trunkEffect" style={{
+         width: '50%',
+         height: '100vh',
+       }}>
       </div>
 
       <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% mr-4% justify-right items-right'>
@@ -97,7 +97,7 @@ const App = () => {
         </div>
 
   </div>
-  </body>
+  </div>
   );
 }
 
