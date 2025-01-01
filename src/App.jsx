@@ -12,24 +12,23 @@ import 'reactjs-popup/dist/index.css';
 import './Popup.css'
 
 import * as THREE from 'three';
-import TRUNK from 'vanta/src/vanta.trunk'
+import WAVES from 'vanta/src/vanta.waves'
 
 const App = () => {
 
   useEffect(() => {
 
-    TRUNK({
-      el: "#trunkEffect",
-      mouseControls: true,
+    WAVES({
+      el: "#wavesEffect",
       THREE: THREE,
+      mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      scale: 15.00,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x9Be0e0,
-      backgroundColor: 0x17182d,
-      spacing: 4.50,
-      chaos: 3.50
+      color: 0x17182d,
     })
 
   }, []);
@@ -38,29 +37,28 @@ const App = () => {
     <div className='bg-backgroundColor'>
     <div className='overflow-y-scroll max-h-screen snap-y snap-mandatory scroll-smooth'>
 
-
-    <div id="introduction" className='flex justify-between w-full'>
-      
-      <div id="trunkEffect" style={{
-         width: '50%',
-         height: '100vh',
-       }}>
-      </div>
-
-      <div className='snap-always snap-center flex font-inter flex-col mt-15.5% mb-30% mr-4% justify-right items-right'>
-        <div className='text-right'>
-          <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-textColor font-bold">
+        <div
+      id="wavesEffect"
+      className="flex w-full items-center justify-center"
+      style={{
+        width: "100%",
+        height: "100vh",
+        position: "relative",
+      }}
+    >
+      <div className="snap-always snap-center flex font-inter flex-col mt-4 mb-8 justify-center items-center text-center">
+        <div className="w-full">
+          <h1 className="text-heading(default) sm:text-heading(sm) md:text-heading(md) xl:text-heading(xl) text-textColor font-bold whitespace-nowrap">
             Hi, I'm Hristo
           </h1>
         </div>
 
-        <div className='text-right'>
-          <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold text-white">
-            Software Developer 
+        <div>
+          <h3 className="text-subheading(default) sm:text-subheading(sm) md:text-subheading(md) xl:text-subheading(xl) font-bold text-white whitespace-nowrap">
+            Software Developer
           </h3>
         </div>
       </div>
-
     </div>
      
       
